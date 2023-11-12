@@ -1,6 +1,6 @@
 body {
   background-color: #d2e2f7;
-  font-family: "Raleway", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 .weather-front {
   background-color: #eff4fc;
@@ -9,4 +9,85 @@ body {
   padding: 38px;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
   border-radius: 15px;
+}
+main {
+  padding: 50px 30px;
+}
+.current-city {
+  position: relative;
+  bottom: 40px;
+  font-weight: 600;
+}
+.city-data {
+  display: flex;
+  justify-content: space-between;
+}
+.city-weather-content {
+  display: flex;
+}
+.city-weather-emoji {
+  position: relative;
+  top: 70px;
+  right: 160px;
+  font-size: 55px;
+}
+.city-weather-temp {
+  position: relative;
+  margin-top: 60px;
+  right: 140px;
+  margin-left: 10px;
+  font-size: 60px;
+  font-weight: 400;
+}
+.city-weather-unit {
+  position: relative;
+  margin-top: 70px;
+  right: 150px;
+  font-size: 20px;
+  font-weight: 400;
+
+  margin-left: 10px;
+}
+header {
+  padding: 0 0 40px 0;
+}
+.input-city {
+  border: none;
+  border-radius: 7px;
+  width: 75%;
+  font-size: 17px;
+  background-color: #d2e2f7;
+  padding: 12px 18px;
+  margin-left: 40px;
+}
+.search-button {
+  border: none;
+  border-radius: 4px;
+  background-color: #73a8e6;
+  padding: 13px 18px;
+  font-size: 15px;
+  margin-left: 5px;
+}
+.current-city {
+  font-size: 45px;
+  line-height: 60px;
+}
+.city-weather-info {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  color: rgb(39, 33, 66, 0.8);
+}
+.city-weather-info strong {
+  color: #73a8e6;
+}
+a {
+  color: #73a8e6;
+}
+footer {
+  border-top: 1px solid #d2e2f7;
+  padding: 30px 0 0 0;
+  text-align: center;
+  font-size: 15px;
+  color: rgb(39, 33, 66, 0.7);
 }
