@@ -17,12 +17,14 @@
   <body>
     <div class="weather-front">
       <header>
-        <form class="search-city">
+        <form class="search-city" id="search-city-name">
           <input
             type="search"
             placeholder="Enter a city"
             required
+            id="search-city-input"
             class="input-city"
+            autocomplete="off"
           />
           <input type="submit" value="Search" class="search-button" />
         </form>
@@ -30,7 +32,7 @@
       <main>
         <div class="city-data">
           <div class="city-weather-content">
-            <h1 class="current-city">London</h1>
+            <h1 class="current-city" id="city">London</h1>
             <div class="city-weather-emoji">☁️</div>
             <div class="city-weather-temp">13</div>
             <div class="city-weather-unit">ºC</div>
@@ -56,5 +58,6 @@
         >
       </footer>
     </div>
+    <script src="src/app.js"></script>
   </body>
 </html>
