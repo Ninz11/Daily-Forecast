@@ -6,6 +6,7 @@ function retainWeatherInfo(response) {
   let windElement = document.querySelector("#wind-mph");
   let dayTime = document.querySelector("#day-time");
   let date = new Date(response.data.time * 1000);
+  let weatherIcon = document.querySelector("#weather-icon");
 
   dayTime.innerHTML = currentDate(date);
   currentTemperature.innerHTML = Math.round(response.data.temperature.current);
@@ -13,6 +14,10 @@ function retainWeatherInfo(response) {
   cityDescription.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windElement.innerHTML = `${response.data.wind.speed}mph`;
+  weatherIcon.innerHTML = `<img
+              src=
+              "${response.data.condition.icon_url}"class="city-weather-emoji"
+            />`;
 }
 
 function currentDate(date) {
