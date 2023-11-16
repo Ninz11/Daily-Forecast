@@ -18,7 +18,7 @@ main {
   margin-top: 3px;
   font-weight: 500;
   font-size: 60px;
-  line-height: 60px;
+  line-height: 50px;
 }
 .city-data {
   display: flex;
@@ -29,8 +29,7 @@ main {
 }
 .city-weather-emoji {
   position: relative;
-  margin-right: 10px;
-  width: 110px;
+  width: 120px;
 }
 .city-weather-temp {
   position: relative;
@@ -46,6 +45,26 @@ main {
   font-size: 23px;
   font-weight: 400;
   margin-left: 13px;
+}
+.forecast-container {
+  margin-top: 40px;
+}
+.forecast-day-one {
+  font-size: 18px;
+  margin-left: 18px;
+  margin-top: 3px;
+}
+.img {
+  width: 60px;
+}
+.day-one-temp {
+  font-size: 15px;
+  margin-left: 15px;
+  opacity: 0.7;
+}
+.day-one-min {
+  margin-left: 3px;
+  opacity: 0.5;
 }
 header {
   padding: 0 0 40px 0;
@@ -72,9 +91,7 @@ header {
 }
 
 .city-weather-info {
-  position: relative;
-  margin-top: 8px;
-  font-size: 18px;
+  font-size: 19px;
   line-height: 24px;
   font-weight: 500;
   color: rgb(39, 33, 66, 0.8);
