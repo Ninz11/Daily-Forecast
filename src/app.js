@@ -57,3 +57,25 @@ function handleCitySubmit(event) {
 let citySearch = document.querySelector("#search-city-name");
 citySearch.addEventListener("submit", handleCitySubmit);
 search("London");
+
+function presentForecast() {
+  let days = ["Fri", "Sat", "Sun", "Mon", "Tue"];
+  let weatherForecastHtml = "";
+  days.forEach(function (day) {
+    weatherForecastHtml =
+      weatherForecastHtml +
+      `
+    <div class="forecast-container">
+    <div class="forecast-day">${day}</div>
+    <div class="icon">☁️</div>
+    <div class="day-one-temp">
+    <span class="day-one-max">11º</span>
+    <span class="day-one-min">4º</span>
+    </div>
+    </div>
+    `;
+  });
+  let weatherForecast = document.querySelector("#weather-forecast");
+  weatherForecast.innerHTML = weatherForecastHtml;
+}
+presentForecast();
