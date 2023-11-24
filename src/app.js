@@ -18,6 +18,7 @@ function retainWeatherInfo(response) {
               src=
               "${response.data.condition.icon_url}"class="city-weather-emoji"
             />`;
+  getForecast(response.data.city);
 }
 
 function currentDate(date) {
@@ -56,9 +57,15 @@ function handleCitySubmit(event) {
 
 let citySearch = document.querySelector("#search-city-name");
 citySearch.addEventListener("submit", handleCitySubmit);
-search("London");
 
-function presentForecast() {
+function getForecast(city) {
+  let apiKey = "0t4369b8fdae423afc4eebc21fcao402";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&unit=metric`;
+  axios(apiUrl).then(presentForecast);
+}
+
+function presentForecast(response) {
+  console.log(response.data);
   let days = ["Fri", "Sat", "Sun", "Mon", "Tue"];
   let weatherForecastHtml = "";
   days.forEach(function (day) {
@@ -78,4 +85,5 @@ function presentForecast() {
   let weatherForecast = document.querySelector("#weather-forecast");
   weatherForecast.innerHTML = weatherForecastHtml;
 }
-presentForecast();
+search("London");
+getForecast("Paris");
